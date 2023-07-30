@@ -1,22 +1,21 @@
 plugins {
-    // id for library
-    id 'java-library'
-    // id for maven to publish jar to local repository
-    id 'maven-publish'
+    id 'java'
 }
 
-java {
+group 'com.epam.demo'
+version '1.0-SNAPSHOT'
+
+/*java {
 // provide sourceCompatibility
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
-}
+}*/
 
 repositories {
-// provide repository, where required dependencies are located
     mavenCentral()
 }
 
-publishing {
+/*publishing {
     publications {
         maven(MavenPublication) {
 // provide groupId
@@ -29,21 +28,10 @@ publishing {
             from components.java
         }
     }
-}
+}*/
 
-//add Apache Apache Commons Lang 3.10 (or higher) dependency
 dependencies {
-    implementation 'org.apache.commons:commons-lang3:3.10'
-}
-
-jar {
-    manifest {
-        //provide manifest with such attributes as 'Implementation-Title', 'Implementation-Version'
-        attributes(
-                'Implementation-Title': 'stage 2 build tools with gradle subproject of demo',
-                'Implementation-Version': '1.1'
-        )
-    }
+    implementation 'com.epam.utils:utils:1.2'
 }
 
 test {

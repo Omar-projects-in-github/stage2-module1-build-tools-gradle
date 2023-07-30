@@ -8,7 +8,7 @@ plugins {
 java {
 // provide sourceCompatibility
     sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+//    targetCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
@@ -22,9 +22,9 @@ publishing {
 // provide groupId
             groupId = 'com.epam.utils'
 // provide artifactId
-            artifactId = 'artifact-Id-stage2.utils'
+            artifactId = 'utils'
 // provide version
-            version = '1.1'
+            version = '1.2'
 
             from components.java
         }
@@ -40,8 +40,8 @@ jar {
     manifest {
         //provide manifest with such attributes as 'Implementation-Title', 'Implementation-Version'
         attributes(
-                'Implementation-Title': 'stage 2 build tools with gradle subproject of utils',
-                'Implementation-Version': '1.1'
+                'Implementation-Title': 'stage 2 gradle utils',
+                'Implementation-Version': '1.2'
         )
     }
 }
